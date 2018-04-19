@@ -1,6 +1,6 @@
 # ICS3U
 # Assignment 2: Logo
-# <your name>
+# Faraz
 
 # adapted from http://www.101computing.net/getting-started-with-pygame/
 
@@ -14,7 +14,7 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
-
+BLUE = (48, 155, 221)
 # Set the screen size (please don't change this)
 SCREENWIDTH = 400
 SCREENHEIGHT = 400
@@ -42,14 +42,18 @@ while carryOn:
     # There should be none for a static image
     
     # --- Draw code goes here
+    
 
     # Clear the screen to white
     screen.fill(WHITE)
 
     # Queue different shapes and lines to be drawn
-    # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
-    # pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
-    # pygame.draw.ellipse(screen, BLACK, [20, 20, 250, 100], 2)
+    # Draw the circle around the logo
+    pygame.draw.ellipse(screen, BLACK, [10, 10, 375, 375], 0)
+    pygame.draw.ellipse(screen, WHITE, [25, 25, 345, 345], 0)
+    
+    #Draw the polygon that will go inside the circle
+    pygame.draw.polygon(screen, BLACK, [(50, 315), (200, 220), (350, 310), (220, 185), (200, 15), (180, 185), (50, 310)], 0)
 
     # Update the screen with queued shapes
     pygame.display.flip()
